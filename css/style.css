@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+li,
+a,
+button,
+p {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*  */
+html,
+        body {
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        .user-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: block;
+            border-bottom: 10px solid transparent;
+            /* Add a transparent border */
+            
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            left: 50%;
+            /* Position the left edge of the dropdown menu at the center of the .dropdown element */
+            transform: translateX(-75%);
+
+            /* Shift the dropdown menu to the left by half its width */
+            top: 100%;
+            /* Position the dropdown menu just below the .dropdown element */
+            border-radius: 10px;
+            border:1px dotted black;
+        }
+
+        .dropdown-menu li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            display: block;
+            background-color: white;
+           
+        }
+
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+            background-color: white;
+            
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            font-style: italic;
+        }
+
+/*  */
+
+.Market {
+    margin-top: 110px;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px dotted black; */
+    height: 100px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0px;
+    border-bottom:2px solid whitesmoke;
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.headerContainer {
+    background-color: white;
+    /* Set the background color to whitesmoke */
+    width: 100%;
+    /* Make the headerContainer span the full width of the viewport */
+    /* Add some padding to give the content some room */
+    display:flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    overflow: visible;
+}
+
+.L1 {
+    max-width: fit-content;
+    overflow: hidden;
+    /* flex-basis: 4% */
+}
+
+.L1 img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* .logo{
+    max-height: 80px;
+    border:1px dotted black;
+    margin-right:auto;
+} */
+
+.nav_links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list items display in a row */
+    justify-content: space-between; /* Distribute the space between the list items evenly */
+    width: auto; /* Limit the width of the nav_links */
+    overflow: visible; /* Ensure that the contents of the nav_links do not overflow */
+    flex-wrap: nowrap; /* Prevent the list items from wrapping onto multiple lines */
+    align-items: center; 
+}
+
+
+.nav_links li {
+    /* border: 1px dotted black; */
+    display: inline-block;
+    padding: 0px 20px;
+    height: 100%;
+    flex-shrink: 0; /* Prevent the list items from shrinking if the space is too small */
+    align-items: center; 
+}
+
+.nav_links li a {
+    /* border: 1px dotted black; */
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #008000;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* border:1px dotted black; */
+}
+
+button:hover {
+    background-color: #808080;
+}
+
+.stdSec {
+    max-width: 90%;
+    border: 0px dotted black;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.stdSec::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
+}
+
+.stdSec .row {
+    height: 100px;
+    border: 1px dotted black;
+    margin: 20px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+
+.stdSec .row .col {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: 100%;
+    height: 80px;
+    width: 100px;
+    max-width: 100px;
+    border: 1px dotted black;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stdSec .row .col img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.stdSec .col-wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin: 10px;
+    border: 1px dotted black;
+
+}
+
+.stdSec .col-wrapper .col2 {
+    height: 700px;
+    max-height: 100%;
+    width: 300px;
+    border: 1px dotted black;
+    margin: 10px;
+    flex-shrink: 0;
+    
+}
+
+.stdSec .col-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
+}
+
+.stdSec table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stdSec th,
+.stdSec td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.stdSec tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.stdSec th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.stdSec1 {
+    margin-top:100px;
+    display: flex;
+    align-items: center;
+    height: 450px;
+}
+
+.stdSec1 img {
+    max-width: 80%;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.stdSec1 h1{
+    margin:20px;
+}
+
+.text-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-heading {
+    margin: 20px;
+    font-weight: bold;
+}
+
+/* .text-container .landing-heading{
+    margin:10px;
+} */
+
+.text-container .button {
+    border-radius: 10px;
+    border:0px solid grey;
+    padding:5px 10px;
+    margin: 0; /* Remove default margins */
+    background-color: whitesmoke;
+}
+
+#pieChart {
+    width: 50px;  
+    height: 50px; 
+}
+/* see this is solving issue:suppose this is senario where under stdSec i have two types of items one is row another is col2
+where col2 wants to be inline where as row wants to be vertically set 
+so now i cannot tell stdSec to have display:flex which would cause dispute 
+tell me what to do ==> answer is use display :inline-block
+->
+so display: inline block makes the div class elements to be inline 
+and display:flex makes the children of it's to be inline that's my conclusion;
+but now i found another loophole in this also : inline block will only fit as many possible in same row and then shift to next row and start placing in column wise
+*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:30px;
+    padding:50px;
+    background-color: whitesmoke;
+}
+
+.row {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
+    background-color: whitesmoke
+}
+
+.col {
+    width: 45%; /* Adjust this value to change the space between the columns */
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:5px;
+    background-color: #22223b;
+    border-radius: 7px;
+}
+
+.col img {
+    width: 100%;
+    height: 75%; /* Adjust this value to change the space for the image */
+}
+
+.col p {
+    padding:8px;
+    height: 25%; /* Adjust this value to change the space for the text */
+    background-color: #22223b;
+    color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.stdSec2{
+    background-color: whitesmoke;
+}
+
+.stdSec2 .customHeading1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+
+.stdSec2 .customHeading1 h1 {
+    font-size: 30px;
+    background-color: whitesmoke;
+}
+
+.orderContainer{
+    width:100%;
+}
